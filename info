@@ -1,0 +1,8 @@
+ strings and numbers are primitive values and are immutable by nature
+ 
+ redux no mutation
+ 
+ state = ['Do not mutate state!']
+ 
+state.concat(action.todo)
+[...state, action.todo]
