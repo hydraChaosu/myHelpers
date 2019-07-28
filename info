@@ -6,3 +6,6 @@
  
 state.concat(action.todo)
 [...state, action.todo]
+
+DEEP COPY
+let newObj = JSON.parse(JSON.stringify(obj));
