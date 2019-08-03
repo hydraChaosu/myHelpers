@@ -109,7 +109,38 @@ console.log(Andy.dps)//10000
 Andy.dps = 300//cant set dps do not work but do not throw errors either
 console.log(Andy.dps)//10000
 
+//arrow
+class Cat {
+  constructor(a, b) {
+    this._a = a;
+    this.b = b;
+  }
+  get a() {
+    return this._a + 1;
+  }
+  static miau() {
+    console.log("mreee");
+  }
+  feed() {
+    return this.a + this.b;
+  }
+  feed2 = () => {
+    return this.a + this.b;
+  };
+}
 
+const miol = new Cat(1, 2);
+console.log(miol._a, miol.a, miol.b); //1 2 2
+Cat.miau();
+miol.feed(); //4
+miol.feed2(); //4
+const ran = miol.feed(); // 4
+const ran2 = miol.feed2(); //4
+
+const ran3 = miol.feed;
+const ran4 = miol.feed2;
+ran3(); //undefined
+ran4(); //4
 
 
 
