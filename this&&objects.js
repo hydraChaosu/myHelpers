@@ -144,7 +144,40 @@ ran4(); //4
 
 
 
+const ii = document.getElementById("fakebox-input");
 
+ii.addEventListener("click", function() {
+  console.log(this); //input
+});
+
+ii.addEventListener("click", function(e) {
+  console.log(this, e); //input //mouseclik
+});
+
+ii.addEventListener("click", () => {
+  console.log(this); //window
+});
+
+ii.addEventListener("click", e => {
+  console.log(this, e); //window //mouseclick
+});
+
+function log(e) {
+  console.log(this, e);
+}
+const log2 = e => {
+  console.log(this, e);
+};
+
+ii.addEventListener("click", log); //input //mouseclick
+ii.addEventListener("click", e => log(e)); //window //mouseclick
+ii.addEventListener("click", log2); //window//mousecliuck
+ii.addEventListener("click", e => log2(e)); //window//mousecliuck
+//not use arrow in
+//object literal methods
+//object prototype
+//callback functions with dynami  context
+//Invoking constructors
 
 
 
