@@ -180,7 +180,42 @@ ii.addEventListener("click", e => log2(e)); //window//mousecliuck
 //Invoking constructors
 
 
+////
+class Sc2 {
+  constructor() {
+    this.a = 1;
+  }
+  kotek(e) {
+    return [e, this];
+  }
+  logger() {
+    setTimeout(function() {
+      console.log(this);
+    }, 1000);
+  }
+}
 
+const cat = new Sc2();
+
+cat.logger(); //  Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+
+class Sc3 {
+  constructor() {
+    this.a = 1;
+  }
+  kotek(e) {
+    return [e, this];
+  }
+  logger() {
+    setTimeout(() => {
+      console.log(this);
+    }, 1000);
+  }
+}
+
+const cat2 = new Sc3();
+
+cat2.logger(); //Sc3
 
 
 
