@@ -2,11 +2,8 @@ let cat = "kot";
 const roman = {
   kot: "pije"
 };
-
 console.log(roman.kot);
-
 roman[cat] = "nie pije";
-
 console.log(roman.kot);
 
 //Object wit get and set///////////////////////////////////////////////////////////////
@@ -20,7 +17,6 @@ const o = {
     this.a = x / 2;
   }
 };
-
 console.log(o.a); // 7
 console.log(o.b); // 8
 o.b = 50;
@@ -141,9 +137,7 @@ const ran3 = miol.feed;
 const ran4 = miol.feed2;
 ran3(); //undefined
 ran4(); //4
-
-
-
+// test it on google main page 
 const ii = document.getElementById("fakebox-input");
 
 ii.addEventListener("click", function() {
@@ -217,7 +211,24 @@ const cat2 = new Sc3();
 
 cat2.logger(); //Sc3
 
+//
+class Sc3 {
+  constructor() {
+    this.a = 1;
+  }
+  kotek(e) {
+    return [e, this];
+  }
+  logger() {
+    setTimeout(() => {
+      console.log(this);
+    }, 1000);
+  }
+}
 
+const cat2 = new Sc3();
+document.addEventListener("click", cat2.logger); //document
+document.addEventListener("click", () => cat2.logger()); //Sc3
 
 
 
