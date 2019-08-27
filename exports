@@ -39,3 +39,41 @@ export const now = new Date()
  * console.assert(now instanceof Date)
 
  */
+ 
+ 
+ 
+ ///////////////////////////
+ 
+ module.exports.multiply = multiply;
+ module.exports.description = "mnozenie";
+// tosamo
+module.exports = { multiply, description: "mnozenie" };
+ //use
+const { multiply, description } = require("./components/multiply");
+const result2 = multiply(1, 2, 3, 4);
+
+//use
+ const multiply = require("./components/multiply");
+ const result2 = multiply.multiply(1, 2, 3, 4);
+ console.log(result2);
+
+
+module.exports = addNumber;
+//use
+const add = require("./components/add");
+const result = add(1, 2, 3, 4);
+console.log(result);
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
