@@ -1,0 +1,22 @@
+localStorage.setItem('todos',JSON.stringify({
+username: "Kamil",
+todoItems: [{name: "eat", done: false},{name: "sleep", done: false},{name: "pee", done: false},{name: "play", done: true}],
+showCompleted: true
+}))
+
+let data = localStorage.getItem("todos")
+
+JSON.parse(data)
+
+{username: "Kamil", todoItems: Array(4), showCompleted: true}
+
+username: "Kamil"
+todoItems: Array(4)
+0: {name: "eat", done: false}
+1: {name: "sleep", done: false}
+2: {name: "pee", done: false}
+3: {name: "play", done: true}
+length: 4
+__proto__: Array(0)
+showCompleted: true
+__proto__: Object
