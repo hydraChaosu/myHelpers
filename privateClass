@@ -44,8 +44,11 @@ class Person {
 const bob = new Person('Bob');
 bob.name;
 bob.say();
-
-
-
+/*
+use this in class
+  get name() {
+    return this.#_name;
+  }
+*/
 
 
