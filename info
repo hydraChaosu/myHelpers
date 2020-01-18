@@ -9,3 +9,9 @@ state.concat(action.todo)
 
 DEEP COPY
 let newObj = JSON.parse(JSON.stringify(obj));
+
+in loop
+          setTimeout(() => {
+            console.log(i, soundtrack[i]);
+            this.onPianoButtonClick(null, soundtrack[i]);
+          }, tempo * i);
