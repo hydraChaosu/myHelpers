@@ -15,3 +15,29 @@ in loop
             console.log(i, soundtrack[i]);
             this.onPianoButtonClick(null, soundtrack[i]);
           }, tempo * i);
+
+function debounce(call, time) {
+    let timeout;
+    return function(...args) {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => call.apply(this,args), time)
+    }
+}
+
+function throttle(call, time) {
+    let throttled = true
+    return function(...args) {
+    if (!throttled) return
+    throttled = false
+    call.apply(this, args)
+    setTimeout(() => throttled = true, time)
+    
+    
+    
+    }
+
+}
+
+
+
+
