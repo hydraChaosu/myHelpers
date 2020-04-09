@@ -41,7 +41,11 @@ function throttle(call, time) {
 
 ////
 
-var a = function b() {}
+var a = function b() {
+      a = "c"
+      a = b
+      a // function b() mozna miec dostep do b w named function ekspression 
+}
 
 a() ok 
 b() error
