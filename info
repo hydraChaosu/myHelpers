@@ -39,5 +39,19 @@ function throttle(call, time) {
 }
 
 
+////
+
+var a = function b() {}
+
+a() ok 
+b() error
+
+
+
+
+
+
+
+
 
 
