@@ -51,7 +51,9 @@ a() ok
 b() error
 
 
-
+date2 = input.valueAsDate;
+a = date.toISOString()
+a.split("T") na lewo mamy date na prawo czas
 
 
 
