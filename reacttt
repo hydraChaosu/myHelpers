@@ -1,0 +1,4 @@
+React.memo on primitives and big components
+useMemo on advances variables and references
+
+dont use on small components
