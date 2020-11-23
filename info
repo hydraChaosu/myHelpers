@@ -55,7 +55,20 @@ date2 = input.valueAsDate;
 a = date.toISOString()
 a.split("T") na lewo mamy date na prawo czas
 
+const data = [1, 2, 3, 4];
+const data2 = [1, [2, 3], 4, [5, 6]];
 
+const showData = (info) => {
+  for (let data of info) {
+    if (Array.isArray(data)) {
+      showData(data);
+    } else {
+      console.log(data);
+    }
+  }
+};
+
+showData(data2);
 
 
 
