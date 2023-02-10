@@ -71,6 +71,32 @@ const showData = (info) => {
 showData(data2);
 
 
-
+function filterArray(arr, query) {
+    query = query.toLowerCase();
+    return arr.filter(function(el) {
+        if (el === undefined || el === null || el === "") {
+            return false;
+        } else if (typeof el === "boolean") {
+            return false;
+        } else if (typeof el === "object") {
+            if(Array.isArray(el)){
+                return filterArray(el, query);
+            }
+            else {
+                return Object.values(el).some(function(v) {
+                    if(v!==null && typeof v === "object"){
+                        return filterArray(Object.values(v), query);
+                    }
+                    else if(v!==null && v.toString().toLowerCase().includes(query)){
+                        return true;
+                    }
+                });
+            }
+        } else if (el.toString().toLowerCase().includes(query)) {
+            return true;
+        }
+        return false;
+    });
+}
 
 
