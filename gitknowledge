@@ -1,3 +1,4 @@
 PPM w folderze w otworz konsole gita
 potem git clone i to co w ssh jest
 
+git merge origin/main - update bran cha z mastera
