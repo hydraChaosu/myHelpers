@@ -1,0 +1,4 @@
+const someValue = 0.1 + 0.2;
+if (Math.abs(someValue - 0.3) < Number.EPSILON) {
+  // someValue is (effectively) equal to 0.3
+}
