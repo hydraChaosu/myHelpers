@@ -2,3 +2,7 @@ React.memo on primitives and big components
 useMemo on advances variables and references
 
 dont use on small components
+
+use Callback on custom hooks
+img wieksze od 9.7kb sa traktowane jako pliki
+mniejsze jako ciag binarny
