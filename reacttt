@@ -6,3 +6,18 @@ dont use on small components
 use Callback on custom hooks
 img wieksze od 9.7kb sa traktowane jako pliki
 mniejsze jako ciag binarny
+
+do loadera w react router
+const response = await queryClient.fetchQuery(
+[`key`],
+{
+queryFn: () =>
+fetch(
+
+),
+}
+);
+
+useQuery do componenta
+
+queryClient.getQueryData([querykeys])//bierze dane z klucza
