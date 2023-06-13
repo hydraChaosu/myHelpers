@@ -21,3 +21,15 @@ fetch(
 useQuery do componenta
 
 queryClient.getQueryData([querykeys])//bierze dane z klucza
+
+most recent state
+    setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+    
+useEffect(() => {
+  return cleanup => dosth
+  // odpali sie przy componoent ummount,
+  //jak mamy zmienne w dependecy array to pierwszy run zwraca fcje
+  //a drugi odpala stara fcje zwrocona z pierwszego , robi to co w useEffect i zwraca nowa fcje cleanupu
+}, [])    
