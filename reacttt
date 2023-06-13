@@ -33,3 +33,26 @@ useEffect(() => {
   //jak mamy zmienne w dependecy array to pierwszy run zwraca fcje
   //a drugi odpala stara fcje zwrocona z pierwszego , robi to co w useEffect i zwraca nowa fcje cleanupu
 }, [])    
+
+
+/////////zamykani widoku gdy nie jest sie na el
+  const [isOpen, setIsOpen] = useState(false);
+  const divEl = useRef();
+
+  useEffect(() => {
+    const handler = (event) => {
+      if (!divEl.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handler, true);
+
+    return () => {
+      document.removeEventListener('click', handler);
+    };
+  }, []);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
