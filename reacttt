@@ -59,3 +59,12 @@ useEffect(() => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
+
+
+function doSth() {
+    dosth
+    return
+}
+const[a,b] = useState( () => doSth() ) <--- funkcja odpali sie tylko przy pierwszym renderze
+const[a,b] = useState( doSth() ) <--- funkcja odpali sie przy każdym renderze
