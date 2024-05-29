@@ -68,3 +68,5 @@ function doSth() {
 }
 const[a,b] = useState( () => doSth() ) <--- funkcja odpali sie tylko przy pierwszym renderze
 const[a,b] = useState( doSth() ) <--- funkcja odpali sie przy każdym renderze
+
+useRef używamy gdy wartości są mutowalne ale sa takie same pomiedzy renderowaniami
